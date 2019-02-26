@@ -1,0 +1,252 @@
+body{
+	background-image: url('../image/personalCenter/background.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/* -- 菜单栏 ---------------------------------------------------------------------------------- */
+.menu{    
+	width:100%;  
+	z-index:1;
+	position:fixed;   
+	top: 0;
+	left: 0; 
+}    
+/* -- 个人中心上部 ----------------------------------------------------------------------------- */
+.block{
+	height: 70px;
+}
+#personalInfo .personalInfoBox{
+	height: 225px;
+	background-color: rgba(242, 248, 238, 0.7);
+	border-radius: 2px;
+	position: relative;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+#personalInfo .personalInfoBox .head img{    /* 头像 */
+	width: 150px;
+	border-radius: 100px;
+	position: absolute;
+	top: 35px;
+	left: 85px;
+}
+#personalInfo .personalInfoBox .personalId{    /* 名字 */
+	position: absolute;
+	font-size: 20px;
+	font-weight: 600;
+	top: 95px;
+	left: 260px;
+}
+#personalInfo .personalInfoBox .personalId img{   /* VIP等级 */
+	width: 25px;
+	margin-left: 10px;
+}
+#personalInfo .personalInfoBox .personalInfoText{   /* 个人资料描述 */
+	position: absolute;
+	font-size: 16px;
+	left: 260px;
+	top: 135px;
+}
+#personalInfo .personalInfoBox .editBtn{    /* 编辑个人资料按钮 */
+	position: absolute;
+	border: 1px solid rgb(46, 117, 182);
+	padding: 7px 20px 7px 20px;
+	border-radius: 8px;
+	color: rgb(46, 117, 182);
+	text-decoration: none;
+	bottom: 40px;
+	right: 60px;
+	transition: all 0.5s;
+}
+#personalInfo .personalInfoBox .editBtn:hover{
+	background-color: rgba(229, 239, 249, 0.7);
+}
+
+/* -- 个人中心下部 ----------------------------------------------------------------------------- */
+#personalBlock{
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 40px;
+}
+#personalBlock .blockLeft{
+	height: 300px;
+}
+/* -- 个人中心下部左侧上部 --------------------------------------------- */
+#personalBlock .blockLeft .blockLeftTop{
+	background-color: rgba(242, 248, 238, 0.7);
+	height: 90px;
+	margin-bottom: 20px;
+	position: relative;
+}
+#personalBlock .blockLeft .blockLeftTop div{
+	position: absolute;
+	font-size: 16px;
+	padding-right: 15px;
+	border-right: 1px solid black;
+	top: 22px;
+	text-align: center;
+}
+#personalBlock .blockLeft .blockLeftTop div .num{
+	font-size: 14px;
+}
+#personalBlock .blockLeft .blockLeftTop .follower{
+	left: 55px;
+}
+#personalBlock .blockLeft .blockLeftTop .fans{
+	left: 120px;
+}
+#personalBlock .blockLeft .blockLeftTop .share{
+	left: 195px;
+	border-right: 0;
+}
+/* -- 个人中心下部左侧下部 --------------------------------------------- */
+#personalBlock .blockLeft .blockLeftBottom{
+	background-color: rgba(242, 248, 238, 0.7);
+	height: 250px;
+}
+#personalBlock .blockLeft .blockLeftBottom ul{
+	border: 0;
+}
+#personalBlock .blockLeft .blockLeftBottom ul li{
+	float: none;
+}
+#personalBlock .blockLeft .blockLeftBottom ul li a{
+	margin: 8px 20px;
+	border-bottom: 1px solid white;
+	color: black;
+	letter-spacing: 3px;
+	font-size: 14px;
+}
+#personalBlock .blockLeft .blockLeftBottom ul li a:focus,
+#personalBlock .blockLeft .blockLeftBottom ul li a:hover{
+	background: none;
+	border-top: 1px solid rgba(242, 248, 238, 0);
+	border-left: 1px solid rgba(242, 248, 238, 0);
+	border-right: 1px solid rgba(242, 248, 238, 0);
+	outline: none;
+}
+#personalBlock .blockLeft .blockLeftBottom .nav-tabs>li.active>a{
+	font-weight: 600;
+	background: none;
+	border-top: 1px solid rgba(242, 248, 238, 0);
+	border-left: 1px solid rgba(242, 248, 238, 0);
+	border-right: 1px solid rgba(242, 248, 238, 0);
+}
+#personalBlock .blockLeft .blockLeftBottom ul li:last-child a{
+	border: 0;
+}
+/* -- 个人中心下部右侧 动态管理 --------------------------------------------- */
+#personalBlock .blockRight{ 
+	padding-right: 0;
+}
+#personalBlock .blockRight #manage{     /* 动态管理 */
+	background-color: rgba(242, 248, 238, 0.7);
+	padding: 0 10px;
+}
+#personalBlock .blockRight #manage ul{      /* 动态管理菜单栏 */
+	margin-bottom: 1px;
+	border-bottom: 1px solid white;
+}
+#personalBlock .blockRight #manage ul li a{
+	border: 0;
+	margin: 7px 0;
+	font-size: 18px;
+	color: black;
+	letter-spacing: 3px;
+}
+#personalBlock .blockRight #manage ul li a:focus,
+#personalBlock .blockRight #manage ul li a:hover{
+	background: none;
+	outline: none;
+}
+#personalBlock .blockRight #manage .nav-tabs>li.active>a{
+	font-weight: 600;
+	background: none;
+}
+#personalBlock .blockRight #manage .info{    /* 每条动态 */
+	border-bottom: 1px solid white;
+}
+#personalBlock .blockRight #manage .info:last-child{
+	border-bottom: 0;
+}
+#personalBlock .blockRight #manage .info .header{     /* 动态简介栏 */
+	padding: 15px 15px 10px 15px;
+}
+#personalBlock .blockRight #manage .info .header .icon img{
+	width: 12px;
+	margin-right: 10px; 
+}
+#personalBlock .blockRight #manage .info .header .detail{
+	font-size: 16px;
+	color: gray;
+}
+#personalBlock .blockRight #manage .info .header .time{
+	font-size: 16px;
+	color: gray;
+	float: right;
+	margin-right: 10px;
+}
+#personalBlock .blockRight #manage .info .content{     /* 动态内容 */
+	padding: 5px 15px 30px 15px;
+}
+#personalBlock .blockRight #manage .info .content .head img{   /* 头像 */
+	width: 50px;
+	border-radius: 50px;
+	float: left;
+}
+#personalBlock .blockRight #manage .info .content .name{   /* 用户名 */
+	font-weight: 600;
+	font-size: 16px;
+	letter-spacing: 2px;
+	margin: 7px 0 0 70px;
+}
+#personalBlock .blockRight #manage .info .content .time{   /* 发布时间 */
+	font-size: 12px;
+	letter-spacing: 2px;
+	margin: 7px 0 0 70px;
+}
+#personalBlock .blockRight #manage .info .content .text{   /* 发布内容 */
+	font-size: 14px;
+	letter-spacing: 1px;
+	margin: 7px 0 0 70px;
+}
+#personalBlock .blockRight #manage .info .content .img img{   /* 分享的图片 */
+	width: 400px;
+	margin: 7px 0 0 70px;
+}
+#personalBlock .blockRight #manage .info .content .voteTitle a{    /* 参与投票的主题 */
+	color: black;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+/* -- 个人中心下部右侧 个人名片 --------------------------------------------- */
+#personalBlock .blockRight #idCard img{
+	width: 395px;
+}
+/* -- 个人中心下部右侧 积分成长 --------------------------------------------- */
+#personalBlock .blockRight #integral{
+	background-color: rgba(242, 248, 238, 0.7);
+	padding: 20px 0 10px 20px;
+}
+#personalBlock .blockRight #integral img{
+	width: 830px;
+}
+/* -- 个人中心下部右侧 用户等级 --------------------------------------------- */
+#personalBlock .blockRight #grade{
+	background-color: rgba(242, 248, 238, 0.7);
+	padding: 20px 0 10px 20px;
+}
+#personalBlock .blockRight #grade img{
+	width: 770px;
+}
+/* -- 个人中心下部右侧 用户权益 --------------------------------------------- */
+#personalBlock .blockRight #vip{
+	background-color: rgba(242, 248, 238, 0.7);
+	padding: 40px 0 40px 55px;
+}
+#personalBlock .blockRight #vip img{
+	width: 770px;
+}

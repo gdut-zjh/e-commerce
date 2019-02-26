@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>华夷文创</title>
+	<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/personalCenter.css"> 
+</head>
+<body>
+	<div id="menu_wrap">        <!-- 菜单栏 -->
+		<div class="menu">
+			<div class="navbar navbar-default menu_navbar" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+							<span class="sr-only">切换导航</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="navbar-brand" href="javascript:void(0);">
+							华夷文创园
+						</div>
+					</div>
+					
+					<div class="collapse navbar-collapse navbar-right" id="example-navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html" class="smoot">首页</a></li>
+							<li><a href="index.html#museum_title" class="smoot">专题博物馆</a></li>
+							<li><a href="index.html#museum_info" class="smoot">华夷资讯</a></li>
+							<li><a href="index.html#show_block" class="smoot">文创商城</a></li>
+							<li><a href="community.html">文创社区</a></li>
+							<li class="active"><a href="#">个人中心</a></li>
+							<li><a href="index.html#about_block" class="smoot">关于我们</a></li>
+						</ul>
+					</div>
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="搜索博物馆或资讯">
+						</div>
+						<button type="submit" class="btn btn-default">搜索</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="block"></div>   <!-- 由于菜单高度为0，用于将主界面内容顶下来 -->
+
+	<section id="personalInfo">    <!-- 个人中心上部 -->
+		<div class="container personalInfoBox">
+			<div class="head">       <!-- 个人资料头像 -->
+				<img src="../image/personalCenter/head2.png" alt="">
+			</div>
+			<p class="personalId">      <!-- 个人资料名字 -->
+				每天都很困的zzzjh
+				<span><img src="../image/personalCenter/v4.png"></span>
+			</p>
+			<p class="personalInfoText">
+				暂无个人资料
+			</p>
+			<a href="javascript:void(0);" class="editBtn">编辑个人资料</a>
+		</div>
+	</section>
+
+	<section id="personalBlock" class="container">   <!-- 个人中心下部 -->
+		<div class="col-md-3 blockLeft">    <!-- 下部左半部分 -->
+			<div class="row blockLeftTop">  <!-- 下部左半部分上部 -->
+				<div class="follower">
+					<span class="num">888</span>
+					<br>
+					<span>关注</span>
+				</div>
+				<div class="fans">
+					<span class="num">25516</span>
+					<br>
+					<span>粉丝</span>
+				</div>
+				<div class="share">
+					<span class="num">128</span>
+					<br>
+					<span>分享</span>
+				</div>
+			</div>
+			<div class="row blockLeftBottom">  <!-- 下部左半部分下部 -->
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#manage" data-toggle="tab">动态管理</a></li>
+					<li><a href="#idCard" tabindex="-1" data-toggle="tab">个人名片</a></li>
+					<li><a href="#integral" tabindex="-1" data-toggle="tab">积分成长</a></li>
+					<li><a href="#grade" tabindex="-1" data-toggle="tab">用户等级</a></li>
+					<li><a href="#vip" tabindex="-1" data-toggle="tab">用户权益</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-9 blockRight tab-content">    <!-- 下部右半部分 -->
+			<div class="tab-pane fade in active" id="manage">    <!-- 动态管理 -->
+				<ul class="nav nav-tabs nav-justified">
+					<li class="active"><a href="#all" data-toggle="tab">动态</a></li>
+					<li><a href="#share" tabindex="-1" data-toggle="tab">分享<span>128</span></a></li>
+					<li><a href="javascript:void(0);" tabindex="-1" data-toggle="tab">话题<span>12</span></a></li>
+					<li><a href="javascript:void(0);" tabindex="-1" data-toggle="tab">收藏<span>10</span></a></li>
+					<li><a href="javascript:void(0);" tabindex="-1" data-toggle="tab">更多<span class="glyphicon glyphicon-chevron-down	"></span></a></li>
+				</ul>
+				<div class="tab-content">
+					<div  class="tab-pane fade in active" id="all">   <!-- 所有动态 -->
+						<div class="info">      <!-- 赞了分享 -->
+							<div class="header">
+								<span class="icon"><img src="../image/personalCenter/like.png"></span>
+								<span class="detail">赞了分享</span>
+								<span class="time">5小时前</span>
+							</div>
+							<div class="content">
+								<span class="head"><img src="../image/personalCenter/head1.jpeg"></span>
+								<div class="name">奇趣文创百科</div>
+								<div class="time">2018.04.09 13:40</div>
+								<div class="text">你最近看过最好笑的一张图片是什么, hhh笑死了</div>
+								<div class="img"><img src="../image/personalCenter/text_img1.jpg"></div>
+							</div>
+						</div>
+						<div class="info">      <!-- 参与投票 -->
+							<div class="header">
+								<span class="icon"><img src="../image/personalCenter/vote.png"></span>
+								<span class="detail">参与了投票</span>
+								<span class="time">2天前</span>
+							</div>
+							<div class="content">
+								<div class="voteTitle">
+									<a href="javascript:void(0);">5.1 劳动节主题设计</a>
+								</div>
+							</div>
+						</div>
+						<div class="info">      <!-- 发布了分享 粤剧博物馆打卡-->
+							<div class="header">
+								<span class="icon"><img src="../image/personalCenter/share.png"></span>
+								<span class="detail">发布分享</span>
+								<span class="time">3天前</span>
+							</div>
+							<div class="content">
+								<span class="head"><img src="../image/personalCenter/head2.png"></span>
+								<div class="name">每天都很困的zzzjh</div>
+								<div class="time">2018.04.06 17:32</div>
+								<div class="text">粤剧博物馆打卡~</div>
+								<div class="img"><img src="../image/personalCenter/text_img2.jpg"></div>
+							</div>
+						</div>
+						<div class="info">      <!-- 发布了分享 永庆坊访谈-->
+							<div class="header">
+								<span class="icon"><img src="../image/personalCenter/share.png"></span>
+								<span class="detail">发布分享</span>
+								<span class="time">4天前</span>
+							</div>
+							<div class="content">
+								<span class="head"><img src="../image/personalCenter/head2.png"></span>
+								<div class="name">每天都很困的zzzjh</div>
+								<div class="time">2018.04.05 22:17</div>
+								<div class="text">永庆坊访谈，一间文创小店的老板人十分nice</div>
+								<div class="img"><img src="../image/personalCenter/text_img3.jpg"></div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="share">    <!-- 分享 -->
+						<div class="info">
+							<div class="header">
+								<span class="icon"><img src="../image/personalCenter/share.png"></span>
+								<span class="detail">发布分享</span>
+								<span class="time">3天前</span>
+							</div>
+							<div class="content">
+								<span class="head"><img src="../image/personalCenter/head2.png"></span>
+								<div class="name">每天都很困的zzzjh</div>
+								<div class="time">2018.04.06 17:32</div>
+								<div class="text">粤剧博物馆打卡~</div>
+								<div class="img"><img src="../image/personalCenter/text_img2.jpg"></div>
+							</div>
+						</div>
+						<div class="info">      <!-- 发布了分享 永庆坊访谈-->
+							<div class="header">
+								<span class="icon"><img src="../image/personalCenter/share.png"></span>
+								<span class="detail">发布分享</span>
+								<span class="time">4天前</span>
+							</div>
+							<div class="content">
+								<span class="head"><img src="../image/personalCenter/head2.png"></span>
+								<div class="name">每天都很困的zzzjh</div>
+								<div class="time">2018.04.05 22:17</div>
+								<div class="text">永庆坊访谈，一间文创小店的老板人十分nice</div>
+								<div class="img"><img src="../image/personalCenter/text_img3.jpg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="idCard">		<!-- 个人名片 -->
+				<img src="../image/personalCenter/idcard.png">
+			</div>	
+			<div class="tab-pane fade" id="integral">	<!-- 积分成长 -->
+				<img src="../image/personalCenter/integral.png">
+			</div>	
+			<div class="tab-pane fade" id="grade">		<!-- 用户等级 -->
+				<img src="../image/personalCenter/grade.png">
+			</div>		
+			<div class="tab-pane fade" id="vip">		<!-- 用户权益 -->
+				<img src="../image/personalCenter/vip.png">
+			</div>		
+		</div>
+	</section>
+	
+	
+
+	<script src="../bootstrap-3.3.7-dist/js/jquery-3.3.1.min.js"></script>
+	<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="../js/main.js"></script>
+</body>
+</html>

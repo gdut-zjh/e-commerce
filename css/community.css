@@ -1,0 +1,21 @@
+body{
+	background-image: url('../image/personalCenter/background.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+/* -- 菜单栏 ---------------------------------------------------------------------------------- */
+.menu{    
+	width:100%;  
+	z-index:1;
+	position:fixed;   
+	top: 0;
+	left: 0; 
+}    
+
+.block{
+	height: 70px;
+}
+
+#community img{
+	width: 1170px;
+}

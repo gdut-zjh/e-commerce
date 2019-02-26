@@ -1,0 +1,714 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* --轮播图------------------------------------------------------------------------------- */
+#myCarousel{        /* 轮播盒子 */
+	overflow: hidden;
+	position: relative;
+	color: white;
+	text-align: center;
+}
+.carousel-fade .carousel-inner .item {    /* 修改轮播图效果为淡入淡出  */
+	transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,  
+.carousel-fade .carousel-inner .active.left,  
+.carousel-fade .carousel-inner .active.right {
+   opacity: 0;
+}
+.carousel-fade .carousel-inner .active,  
+.carousel-fade .carousel-inner .next.left,  
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+.carousel-fade .carousel-inner .next,  
+.carousel-fade .carousel-inner .prev,  
+.carousel-fade .carousel-inner .active.left,  
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
+
+#myCarousel .carousel-control.right,
+#myCarousel .carousel-control.left{     /* 轮播箭头 */
+	background: none;
+	height: 0;
+}
+#myCarousel .carousel-control.right span{
+	position: absolute;
+	top: 349px;
+	right: -15px;
+	transition: right 0.5s;
+}
+#myCarousel .carousel-control.left span{
+	position: absolute;
+	top: 349px;
+	left: -15px;
+	transition: left 0.5s;
+}
+#myCarousel:hover .carousel-control.left span{
+	left: 50px;
+}
+#myCarousel:hover .carousel-control.right span{
+	right: 50px;
+}
+
+#myCarousel .opacity{     /* 透明黑蒙板 */
+	position: absolute;
+	background: rgba(0, 0, 0, 0.3);
+	width: 100%;
+}
+
+#myCarousel .banner1{      /* 轮播图1 */
+	background: url('../image/banner1.png');
+	width: 100%;
+	background-size: cover;
+}
+
+#myCarousel .banner2{     /* 轮播图2 */
+	background: url('../image/banner2.jpg');
+	width: 100%;
+	background-size: cover;
+}
+
+#myCarousel .banner3{    /* 轮播图3 */
+	background: url('../image/banner3.png');
+	width: 100%;
+	background-size: cover;
+}
+
+#myCarousel .banner_title{         /* 轮播图文案  公共属性*/     
+	display: block;
+	font-family: '宋体', sans-serif;
+	font-size: 60px;
+	margin-top: 230px;
+	animation: wax 6s;
+	padding: 0 70px 0 70px;
+	font-weight: 700;
+}
+#myCarousel .banner_title span{
+	color: #028fcc;
+}
+#myCarousel .banner_text{
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	margin-top: 15px;
+	padding: 0 70px 0 70px;
+	animation: wax 6s;
+}
+#myCarousel .btn{
+	width: 130px;
+	height: 50px;
+	font-size: 18px;
+	background-color: rgba(0,0,0,0);
+	color: white;
+	margin-top: 30px;
+	transition: background-color 0.3s;
+	border-radius: 10px;
+	line-height: 40px;
+}
+
+@keyframes wax{
+	from {transform: scale(1.0)}to{transform: scale(1.1)}
+}
+
+#myCarousel .btn:hover{
+	background-color: #028fcc; 
+	border: #028fcc;
+}
+
+
+/* --导航条------------------------------------------------------------------------------- */
+.menu{    
+	width:100%;  
+	z-index:1;
+}    
+.menuFixed{       /* 用于监听滚动时使导航栏置顶 */
+	position:fixed;    
+	top:0;    
+	left:0;  
+}
+.menu .menu_navbar{
+	margin-bottom: 0;
+}
+
+/* --博物馆------------------------------------------------------------------------------- */
+#museum{
+	/* padding-top: 90px;	 */
+	padding-bottom: 130px;
+	border-bottom: 1px solid #f2f2f2;
+	background-color: #f7f7f7;
+}
+#museum .map{
+	background: url('../image/map.png') no-repeat;
+	background-size: 100%;
+	padding-bottom: 82%;
+	position: relative;
+}
+#museum .map .guangfu_block{
+	position: absolute;
+	background: url('../image/guangfu_block.png') no-repeat;
+	width: 53%;
+	background-size: 99%;
+	padding-bottom: 55%;
+	top: 200px;	
+	left: 110px;
+	opacity: 0;
+	transition: all 1s;
+}
+#museum .map .kejia_block{
+	position: absolute;
+	background: url('../image/kejia_block.png') no-repeat;
+	width: 32%;
+	background-size: 99%;
+	padding-bottom: 27%;
+	top: 271px;	
+	right: 245px;
+	opacity: 0;
+	transition: all 1s;
+}
+#museum .map .chaoshan_block{
+	position: absolute;
+	background: url('../image/chaoshan_block.png') no-repeat;
+	width: 29%;
+	background-size: 99%;
+	padding-bottom: 23%;
+	top: 313px;	
+	right: 100px;
+	opacity: 0;
+	transition: all 1s;
+}
+#museum .map .guangfu_block:hover,
+#museum .map .kejia_block:hover,
+#museum .map .chaoshan_block:hover{
+	opacity: 1;
+}
+
+#museum .row{
+	margin-right: 0;
+	margin-left: 0;
+}
+#museum .heading{
+	margin-bottom: 30px;
+}
+#museum .heading h4{
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 0;
+	margin-top: 60px;
+	text-transform: uppercase;
+	font-size: 9.5px;
+	letter-spacing: 4px;
+	font-weight: 600;
+}
+#museum .heading h1{         /* 博物馆大标题 */
+	font-family: 'Montserrat', sans-serif;
+	font-size: 34px;
+	margin-top: 5px;
+	letter-spacing: 5px;
+}
+#museum .heading p{
+	color: #8d8d8d;
+	font: 300 16px/1.65em 'Raleway', sans-serif;
+    margin: 0;
+    opacity: .99;
+}
+#museum .our-museum{
+	margin-bottom: 60px;
+}
+#museum .museum_nav{
+	background: none;
+	padding-left: calc((100% + 410px) / 2);
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+#museum .museum_nav li a{
+	color: #0db8ca;
+	text-decoration: none;
+	font-size: 22px;
+}
+#museum .container .col-md-6{       /* 热门展馆 */
+	position: relative;
+	margin-top: 30px;
+}
+#museum .container .col-md-6 .museum_box{
+	padding-bottom: 55%;
+	background-size: 100%;
+	background-position: center center;
+	transition: background-size 0.5s;
+}
+#museum .container .col-md-6 .museum-yueju{
+	background-image: url('../image/museum-yueju.jpg');
+}
+#museum .container .col-md-6 .museum-shisanhang{
+	background-image: url('../image/museum-shisanhang.jpg');
+}
+#museum .container .col-md-6 .museum-bencao{
+	background-image: url('../image/museum-bencao.jpg');
+}
+#museum .container .col-md-6 .museum-jiujiang{
+	background-image: url('../image/museum-jiujiang.jpg');
+}
+#museum .container .col-md-6 .museum-shiwan{
+	background-image: url('../image/museum-shiwan.jpg');
+}
+#museum .container .col-md-6 .museum-xiangyunsha{
+	background-image: url('../image/museum-xiangyunsha.jpg');
+}
+#museum .container .col-md-6 .museum-xuanjinglong{
+	background-image: url('../image/museum-xuanjinglong.jpeg');
+}
+#museum .container .col-md-6 .museum-sidusichou{
+	background-image: url('../image/museum-sidusichou.jpg');
+}
+#museum .container .col-md-6 .museum-kejia{
+	background-image: url('../image/museum-kejia.jpg');
+}
+#museum .container .col-md-6 .museum-zhongguokejia{
+	background-image: url('../image/museum-zhongguokejia.jpg');
+}
+#museum .container .col-md-6 .museum-dawanshiju{
+	background-image: url('../image/museum-dawanshiju.jpg');
+}
+#museum .container .col-md-6 .museum-qiaoxikejia{
+	background-image: url('../image/museum-qiaoxikejia.jpg');
+}
+#museum .container .col-md-6 .museum-shantouqiaopi{
+	background-image: url('../image/museum-shantouqiaopi.jpg');
+}
+#museum .container .col-md-6 .museum-shantoukaibu{
+	background-image: url('../image/museum-shantoukaibu.jpg');
+}
+#museum .container .col-md-6 .museum-chaozhouqianci{
+	background-image: url('../image/museum-chaozhouqianci.png');
+}
+#museum .container .col-md-6 .museum-chaozhou{
+	background-image: url('../image/museum-chaozhou.jpeg');
+}
+#museum .container .col-md-6 .museum-wenhuachaozhou{
+	background-image: url('../image/museum-wenhuachaozhou.jpg');
+}
+#museum .container .col-md-6 .museum-chaojuyishu{
+	background-image: url('../image/museum-chaojuyishu.png');
+}
+
+#museum .container .col-md-6 .museum_box .museum_opacity{
+	position: absolute;
+	width: calc(100% - 30px);
+	background-color: rgba(0, 0, 0, 0);
+	height: 100%;
+	top: 0;
+	transition: all 0.5s;
+}
+#museum .container .col-md-6 .museum_box .museum_opacity h3{
+	font-weight: 600;
+    font-size: 30px;
+    margin-top: 20%;
+    opacity: 0;
+    transition: all 0.5s;
+    color: #f2f2f2;
+}
+#museum .container .col-md-6 .museum_box .museum_opacity p{
+	font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 5px;
+    opacity: 0;
+    transition: all 0.5s;
+    color: #f2f2f2;
+    padding: 0 10% 0 10%;
+}
+#museum .museum-button .museum-btn{
+	background-color: #0db8ca;
+	border: 0;
+	border-radius: 20px;
+	letter-spacing: 1.5px;
+	font-size: 12px;
+    padding: 14px 29px 14px 29px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.5s,margin-top 0.5s;
+}
+#museum .col-md-6 .museum_box:hover .museum-btn{
+	opacity: 0.9;
+}
+#museum .museum-button .museum-btn:hover{
+	opacity: 0.7;
+}
+#museum .container .col-md-6 .museum_box:hover .museum_opacity{
+	background-color: rgba(0, 0, 0, 0.6);
+}
+#museum .container .col-md-6 .museum_box:hover{
+	background-size: 120%;
+}
+#museum .container .col-md-6 .museum_box:hover .museum_opacity h3{
+	margin-top: 15%;
+    opacity: 1;
+}
+#museum .container .col-md-6 .museum_box:hover .museum_opacity p,
+#museum .container .col-md-6 .museum_box:hover .museum_opacity span{
+    opacity: 1;
+}
+#museum .nav-page{
+	padding-left: calc((100% - 76px) / 2);
+    margin-top: 30px;
+}
+
+#museum .banner1{      /* 轮播图1 */
+	background: url('../image/info1.jpg');
+}
+#museum .banner2{     /* 轮播图2 */
+	background: url('../image/info2.jpg');
+}
+
+#museum .banner3{    /* 轮播图3 */
+	background: url('../image/info3.jpg');
+}
+#museum .banner1,
+#museum .banner2,
+#museum .banner3{
+	padding-bottom: 50%;
+	background-size: cover;
+	background-position: center;
+}
+#museum .info p{
+	border-bottom: 1px dashed black;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+#museum .info p a{
+	text-decoration: none;
+	color: black;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+#museum .info p span{
+	float: right;
+}
+#museum .info .more a{
+	text-decoration: none;
+	float: right;
+	color: black;
+	letter-spacing: 1px;
+}
+
+/* --文创商城------------------------------------------------------------------------------- */
+#show{
+	margin-bottom: 100px;
+}
+#show_block{              /* 用于锚定位 */
+	height: 50px;   
+}
+#show .row{
+	margin-right: 0;
+	margin-left: 0;
+}
+#show .heading h5{
+	font-size: 9.5px;
+	letter-spacing: 3px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-top: 50px;
+}
+#show .heading h1{
+	font-size: 34px;
+    margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 30px;
+}
+
+#show .show_nav{
+	border-bottom: 0;
+	padding-left: calc((100% - 666px) / 2);
+}
+#show .show_nav li a{
+	border: 0;
+}
+
+#show .container .col-md-6{
+	position: relative;
+	margin-top: 30px;
+}
+#show .container .col-md-6 .goods_box{
+	padding-bottom: 55%;
+	background-size: 100%;
+	background-position: center center;
+	transition: background-size 0.5s;
+}
+#show .container .col-md-6 .museum_goods1{
+	background-image: url('../image/goods/1.1museum/1.png');
+}
+#show .container .col-md-6 .museum_goods2{
+	background-image: url('../image/goods/1.1museum/2.jpg');
+}
+#show .container .col-md-6 .localism1{
+	background-image: url('../image/goods/1.2localism/1.png');
+}
+#show .container .col-md-6 .localism2{
+	background-image: url('../image/goods/1.2localism/2.png');
+}
+#show .container .col-md-6 .delicacy1{
+	background-image: url('../image/goods/1.3delicacy/1.png');
+}
+#show .container .col-md-6 .delicacy2{
+	background-image: url('../image/goods/1.3delicacy/2.jpg');
+}
+#show .container .col-md-6 .building1{
+	background-image: url('../image/goods/1.4building/1.png');
+}
+#show .container .col-md-6 .building2{
+	background-image: url('../image/goods/1.4building/2.jpg');
+}
+#show .container .col-md-6 .DragonBoat1{
+	background-image: url('../image/goods/2.1DragonBoat/1.jpg');
+}
+#show .container .col-md-6 .DragonBoat2{
+	background-image: url('../image/goods/2.1DragonBoat/2.jpg');
+}
+#show .container .col-md-6 .MidAutumn1{
+	background-image: url('../image/goods/2.2MidAutumn/1.jpg');
+}
+#show .container .col-md-6 .MidAutumn2{
+	background-image: url('../image/goods/2.2MidAutumn/2.jpg');
+}
+#show .container .col-md-6 .WinterSolstice1{
+	background-image: url('../image/goods/2.3WinterSolstice/1.jpg');
+}
+#show .container .col-md-6 .WinterSolstice2{
+	background-image: url('../image/goods/2.3WinterSolstice/2.jpg');
+}
+#show .container .col-md-6 .life1{     
+	background-image: url('../image/goods/3.1life/1.jpg');
+}
+#show .container .col-md-6 .life2{
+	background-image: url('../image/goods/3.1life/2.png');
+}
+#show .container .col-md-6 .life3{
+	background-image: url('../image/goods/3.1life/3.png');
+}
+#show .container .col-md-6 .life4{
+	background-image: url('../image/goods/3.1life/4.png');
+}
+#show .container .col-md-6 .life5{
+	background-image: url('../image/goods/3.1life/5.png');
+}
+#show .container .col-md-6 .life6{
+	background-image: url('../image/goods/3.1life/6.jpg');
+}
+#show .container .col-md-6 .life7{
+	background-image: url('../image/goods/3.1life/7.jpg');
+}
+#show .container .col-md-6 .life8{
+	background-image: url('../image/goods/3.1life/8.png');
+}
+#show .container .col-md-6 .study1{
+	background-image: url('../image/goods/3.2study/1.jpg');
+}
+#show .container .col-md-6 .study2{
+	background-image: url('../image/goods/3.2study/2.jpg');
+}
+#show .container .col-md-6 .decoration1{
+	background-image: url('../image/goods/3.3decoration/1.png');
+}
+#show .container .col-md-6 .decoration2{
+	background-image: url('../image/goods/3.3decoration/2.png');
+}
+#show .container .col-md-6 .silk1{
+	background-image: url('../image/goods/4.1silk/1.png');
+}
+#show .container .col-md-6 .silk2{
+	background-image: url('../image/goods/4.1silk/2.jpg');
+}
+#show .container .col-md-6 .CantoneseOpera1{
+	background-image: url('../image/goods/5.1CantoneseOpera/1.jpg');
+}
+#show .container .col-md-6 .CantoneseOpera2{
+	background-image: url('../image/goods/5.1CantoneseOpera/2.jpg');
+}
+#show .container .col-md-6 .ChaozhouOpera1{
+	background-image: url('../image/goods/5.2ChaozhouOpera/1.jpg');
+}
+#show .container .col-md-6 .ChaozhouOpera2{
+	background-image: url('../image/goods/5.2ChaozhouOpera/2.jpg');
+}
+#show .container .col-md-6 .HanchuOpera1{
+	background-image: url('../image/goods/5.3HanchuOpera/1.jpg');
+}
+#show .container .col-md-6 .HanchuOpera2{
+	background-image: url('../image/goods/5.3HanchuOpera/2.png');
+}
+#show .container .col-md-6 .GuangdongEmbroidery1{
+	background-image: url('../image/goods/6.1GuangdongEmbroidery/1.jpg');
+}
+#show .container .col-md-6 .GuangdongEmbroidery2{
+	background-image: url('../image/goods/6.1GuangdongEmbroidery/2.jpg');
+}
+#show .container .col-md-6 .BambooLamp1{
+	background-image: url('../image/goods/6.2BambooLamp/1.png');
+}
+#show .container .col-md-6 .BambooLamp2{
+	background-image: url('../image/goods/6.2BambooLamp/2.jpg');
+}
+#show .container .col-md-6 .woodcarving1{
+	background-image: url('../image/goods/6.3woodcarving/1.jpg');
+}
+#show .container .col-md-6 .woodcarving2{
+	background-image: url('../image/goods/6.3woodcarving/2.jpg');
+}
+
+#show .container .col-md-6 .goods_box .shop_opacity{
+	position: absolute;
+	width: calc(100% - 30px);
+	background-color: rgba(255, 255, 255, 0);
+	height: 100%;
+	top: 0;
+	transition: all 0.5s;
+}
+#show .container .col-md-6 .goods_box .shop_opacity h3{
+	font-weight: 600;
+    font-size: 32px;
+    margin-top: 25%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#show .container .col-md-6 .goods_box .shop_opacity p{
+	font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 5px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#show .container .col-md-6 .goods_box .shop_opacity span{
+	font-size: 25px;
+	display: inline-block;
+	margin: 0 5px;
+	opacity: 0;
+    transition: all 0.5s;
+}
+#show .container .col-md-6 .goods_box:hover .shop_opacity{
+	background-color: rgba(255, 255, 255, 0.8);
+}
+#show .container .col-md-6 .goods_box:hover{
+	background-size: 125%;
+}
+#show .container .col-md-6 .goods_box:hover .shop_opacity h3{
+	margin-top: 20%;
+    opacity: 1;
+}
+#show .container .col-md-6 .goods_box:hover .shop_opacity p,
+#show .container .col-md-6 .goods_box:hover .shop_opacity span{
+    opacity: 1;
+}
+
+
+/* --关于我们------------------------------------------------------------------------------- */
+#about_block{              /* 用于锚定位 */
+	height: 90px;   
+}
+#about{
+	width: 100%;
+	height: 734px;
+	background-image: url('../image/about-us.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	color: white;
+}
+#about .opciaty_block{
+	height: 734px;
+	background-color: rgba(0,0,0,0.2);
+}
+#about .row{
+	margin-right: 0;
+	margin-left: 0;
+}
+#about .heading h5{
+	font-size: 9.5px;
+	letter-spacing: 3px;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+#about .heading h1{
+	font-size: 34px;
+    margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 40px;
+}
+#about .row p span img{
+	width: 20px;
+}
+#about .row .code{
+	margin-left: calc((100% - 187px) /2 );
+}
+#about .second_row{
+	margin-left: 65px;
+}
+/* --媒体监听---------------------------------------------------------------------------- */
+@media (max-width: 1199px){
+	#museum .museum-container{
+		height: 180px;
+	}
+	#museum .museum-body p{
+		font: 300 12px 'Poppins', sans-serif;
+	}
+	#museum .heading p{
+		color: #8d8d8d;
+		font: 300 12px/1.8em 'Raleway', sans-serif;
+    	margin: 0;
+    	opacity: .99;
+	}
+	#museum .container .col-md-6 .museum_box:hover .museum_opacity h3{
+		margin-top: 13%;
+	    opacity: 1;
+	}
+	#about .row .code{
+		width: 165px;
+		margin-left: calc((100% - 165px) /2 );
+	}
+}
+@media (max-width: 990px){
+	#museum .container .col-md-6 .museum_box .museum_opacity h3{
+		margin-top: 25%;
+	}
+	#museum .container .col-md-6 .museum_box:hover .museum_opacity h3{
+		margin-top: 20%;
+	    opacity: 1;
+	}
+	#about .row .code{
+		width: 150px;
+		margin-left: calc((100% - 150px) /2 );
+	}
+}
+@media (max-width: 768px){
+	.banner_title{
+		font-size: 26px;
+		margin-top: 250px;
+	}
+	.banner3 .banner_title{
+		margin-top: 220px;
+	}
+	.banner_text{
+		font-size: 9px;
+	}
+}
+@media(max-width: 415px){
+	#museum .container .col-md-6 .museum_box .museum_opacity h3{
+		margin-top: 10%;
+		font-size: 20px;
+	}
+	#museum .container .col-md-6 .museum_box:hover .museum_opacity h3{
+		margin-top: 8%;
+	    opacity: 1;
+	}
+	#museum .museum-button .museum-btn{
+		font-size: 10px;
+	    padding: 8px 23px 8px 23px;
+	}
+}
